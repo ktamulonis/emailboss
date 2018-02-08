@@ -100,12 +100,12 @@ class EmailsController < ApplicationController
         @email.update_attribute( :to_name, @to_name)
         @email.update_attribute( :to_email, @to_email) 
       end
-      if line.include? "Content-Type: text/plain; charset=UTF-8" 
-        @content_start = index+2
-      end
-      if line.start_with? "On "
-        @content_stop = index
-      end
+      # if line.include? "Content-Type: text/plain; charset=UTF-8" 
+      #   @content_start = index+2
+      # end
+      # if line.start_with? "On "
+      #   @content_stop = index
+      # end
       # if @content_start && @content_stop
       #   @content = @original.lines.slice!(@content_start, @content_stop)
       #   @email.update_attribute(:content, @content)
